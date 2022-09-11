@@ -14,4 +14,7 @@
 
     <!--  Input fields hints  -->
     <string name="your_name">What is your name?</string>
+
+    <!--  Button Text/Title  -->
+    <string name="offer_btn_text">Offers</string>
 </resources>

@@ -24,6 +24,7 @@ class MainActivity : AppCompatActivity() {
                 greetingTextView.text = message
                 inputField.text.clear()
             } else {
+                greetingTextView.text = ""
                 Toast.makeText(this@MainActivity, "Please enter your name", Toast.LENGTH_SHORT).show()
                 //  Toast.makeText(applicationContext, "Please enter your name", 2000)
 
