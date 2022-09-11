@@ -16,5 +16,5 @@
     <string name="your_name">What is your name?</string>
 
     <!--  Button Text/Title  -->
-    <string name="offer_btn_text">Offers</string>
+    <string name="offer_btn_text">View Offers</string>
 </resources>
