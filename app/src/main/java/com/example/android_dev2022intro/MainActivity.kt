@@ -3,6 +3,7 @@ package com.example.android_dev2022intro
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
@@ -14,6 +15,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        Log.i("Research", "MainActivity : OnCreate")
+
         val greetingTextView = findViewById<TextView>(R.id.tvHello)
         val inputField = findViewById<EditText>(R.id.etName)
         val submitButton = findViewById<Button>(R.id.tvButton)
@@ -21,7 +24,6 @@ class MainActivity : AppCompatActivity() {
         var enteredName: String = ""
 
         submitButton.setOnClickListener {
-
             enteredName = inputField.text.toString()
             val message = "Welcome back $enteredName"
 
@@ -47,5 +49,41 @@ class MainActivity : AppCompatActivity() {
             intent.putExtra("USER", enteredName)
             startActivity(intent)
         }
+    }
+
+    override fun onStart() {
+        super.onStart()
+
+        Log.i("Research", "MainActivity : OnStart")
+    }
+
+    override fun onResume() {
+        super.onResume()
+
+        Log.i("Research", "MainActivity : OnResume")
+    }
+
+    override fun onPause() {
+        super.onPause()
+
+        Log.i("Research", "MainActivity : OnPause")
+    }
+
+    override fun onRestart() {
+        super.onRestart()
+
+        Log.i("Research", "MainActivity : OnRestart")
+    }
+
+    override fun onStop() {
+        super.onStop()
+
+        Log.i("Research", "MainActivity : OnStop")
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+
+        Log.i("Research", "MainActivity : OnDestroy")
     }
 }
